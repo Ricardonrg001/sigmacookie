@@ -290,7 +290,6 @@
       display: flex;
     }
 
-    /* Panel lateral */
     #cart-panel {
       position: fixed;
       top: 0;
@@ -412,7 +411,6 @@
       flex-shrink: 0;
     }
 
-    /* Overlay oscuro cuando el panel está abierto */
     #cart-overlay {
       position: fixed;
       inset: 0;
@@ -428,7 +426,6 @@
       pointer-events: all;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 2rem;
@@ -437,7 +434,6 @@
       background: var(--cream);
     }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -451,38 +447,32 @@
 </head>
 <body>
 
-<!-- HERO -->
 <header>
   <p class="logo-tag">Repostería casera · Garín</p>
-  <h1>SIGMA<em>aura</em></h1>
+  <h1>SIGMA<em>COOKIE</em></h1>
   <p class="subtitle">Brownies y delicias hechas con amor, por encargo.</p>
   <a href="#productos" class="cta-btn">Ver el menú</a>
   <p class="scroll-hint">↓ Scroll</p>
 </header>
 
-<!-- PRODUCTOS -->
 <section class="products-section" id="productos">
   <p class="section-label">Lo que hacemos</p>
   <h2 class="section-title">Nuestros productos</h2>
   <div class="products-grid" id="grid"></div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>📍 Garín, Buenos Aires &nbsp;·&nbsp; Pedidos por WhatsApp</p>
   <p style="margin-top:0.4rem;">Hecho con 🍫 y mucho amor</p>
 </footer>
 
-<!-- OVERLAY -->
 <div id="cart-overlay" onclick="closeCart()"></div>
 
-<!-- BOTÓN FLOTANTE -->
 <button id="cart-toggle" onclick="toggleCart()">
   🍪 Tu pedido
   <span id="cart-badge"></span>
 </button>
 
-<!-- PANEL LATERAL -->
 <div id="cart-panel">
   <div class="cart-header">
     <span class="cart-header-title">Tu pedido</span>
