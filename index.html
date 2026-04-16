@@ -443,18 +443,31 @@
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     @media (max-width: 500px) {
-      .products-grid { grid-template-columns: 1fr; }
-      #cart-toggle { bottom: 1.25rem; right: 1.25rem; }
+    /* Esto ya lo tenías */
+    .products-grid { grid-template-columns: 1fr; }
+    #cart-toggle { bottom: 1.25rem; right: 1.25rem; }
+
+    /* AGREGÁ ESTO PARA EL TÍTULO */
+    header h1 {
+        font-size: 2.5rem; /* Probá con 2.5 o 2.2 hasta que te guste */
+        letter-spacing: -1px; /* Junta un poquito las letras para que entren */
+        line-height: 1.1;
     }
+
+    .cookie-logo {
+        height: 80px; /* Achicamos un toque el logo también para que no tape tanto */
+    }
+}
+    
+    
   </style>
 </head>
 <body>
 
 <header>
   <p class="logo-tag">Repostería casera · Garín</p>
-  <h1>SIGMA<em>C<img src="logoo.png" alt="O" class="cookie-logo">KIE</em></h1>
+  <h1>SIGMA<br><em>C<img src="logoo.png" alt="O" class="cookie-logo">KIE</em></h1>
   <p class="subtitle">Brownies y delicias hechas con amor, por encargo.</p>
   <a href="#productos" class="cta-btn">Ver el menú</a>
   <p class="scroll-hint">↓ Scroll</p>
