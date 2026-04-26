@@ -5,17 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SigmaCookie — Repostería Casera</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #fdf6ec;
-      --brown-dark: #2c1a0e;
+      --cream: #3e2723;
+      --brown-dark: #f4c9d6;
       --brown-mid: #6b3f1f;
       --brown-light: #c8845a;
-      --caramel: #e8a96a;
-      --accent: #d4572a;
+      --caramel: #f8d6b4;
+      --accent: #fffdfc;
       --text: #1e120a;
       --muted: #7a5c44;
+       
     }
+
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -57,7 +62,7 @@
       font-weight: 500;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--brown-light);
+      color: var(--brown-dark);
       margin-bottom: 1.5rem;
       opacity: 0;
       animation: fadeUp 0.6s 0.2s forwards;
@@ -67,15 +72,17 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(3.5rem, 10vw, 7rem);
       line-height: 1;
-      color: var(--brown-dark);
+      color: var(--caramel);
       margin-bottom: 0.5rem;
       opacity: 0;
       animation: fadeUp 0.7s 0.4s forwards;
     }
 
     h1 em {
-      font-style: italic;
-      color: var(--accent);
+       font-family: "Archivo Black", sans-serif;
+       font-weight: 400;
+       font-style: italic;
+       color: var(--brown-dark);
     }
     .cookie-logo {
       height: 110px; /* Ajusta la altura de la galletita al tamaño de la letra */
@@ -85,7 +92,7 @@
     }
     .subtitle {
       font-size: 1.1rem;
-      color: var(--muted);
+      color: var(--brown-dark);
       font-weight: 300;
       margin-top: 1rem;
       margin-bottom: 2.5rem;
@@ -109,7 +116,7 @@
     }
 
     .cta-btn:hover {
-      background: var(--accent);
+      background: var(--accent);  /* es el q dice el menu*/
       transform: translateY(-2px);
     }
 
@@ -132,7 +139,7 @@
     }
 
     .section-label {
-      text-align: center;
+      text-align: center;   /*esta es la q dice "lo que hacemos" */
       font-size: 0.75rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
@@ -141,10 +148,10 @@
     }
 
     .section-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Playfair Display', serif; /*nuestroa productos*/
       font-size: clamp(2rem, 5vw, 3rem);
       text-align: center;
-      color: var(--brown-dark);
+      color: var(--brown-dark) ;
       margin-bottom: 3.5rem;
     }
 
@@ -155,7 +162,7 @@
     }
 
     .card {
-      background: white;
+      background: #f5e6d3;  /* parte de abajo de prodcutos*/
       border-radius: 1.5rem;
       overflow: hidden;
       box-shadow: 0 4px 24px rgba(44,26,14,0.08);
@@ -170,7 +177,7 @@
     }
 
     .card-img {
-      width: 100%;
+      width: 100%;  /*parte del prducto, cuando ponga fotos tiene q ser aca  borrar xd*/
       height: 200px;
       object-fit: cover;
       display: flex;
@@ -190,13 +197,13 @@
     .card-name {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
-      color: var(--brown-dark);
+      color: var(--cream);
       margin-bottom: 0.4rem;
     }
 
     .card-desc {
       font-size: 0.9rem;
-      color: var(--muted);
+      color: var(--cream);
       line-height: 1.6;
       flex: 1;
       margin-bottom: 1rem;
@@ -212,7 +219,7 @@
     .card-price {
       font-size: 1.4rem;
       font-weight: 700;
-      color: var(--accent);
+      color: #1e120a;
     }
 
     .qty-control {
@@ -221,7 +228,7 @@
       gap: 0.5rem;
     }
 
-    .qty-btn {
+    .qty-btn {               /*el signo de mas y menos*/
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
@@ -239,7 +246,7 @@
 
     .qty-btn:hover {
       background: var(--brown-dark);
-      color: white;
+      color: rgb(0, 0, 0);
       border-color: var(--brown-dark);
     }
 
@@ -278,8 +285,8 @@
     }
 
     #cart-badge {
-      background: var(--accent);
-      color: white;
+      background: var(--accent);  /*el numero q aparece cuando agrego algo*/
+      color: rgb(0, 0, 0);
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 700;
@@ -300,10 +307,10 @@
       top: 0;
       right: 0;
       height: 100%;
-      width: 360px;
+      width: 360px;      /*fondo del carrito, la q se desplega*/
       max-width: 95vw;
-      background: var(--brown-dark);
-      color: var(--cream);
+      background: var(--cream);
+      color: var(--brown-dark);
       z-index: 1100;
       display: flex;
       flex-direction: column;
@@ -325,9 +332,9 @@
     }
 
     .cart-header-title {
-      font-family: 'Playfair Display', serif;
+      font-family: "Archivo Black", sans-serif;
       font-size: 1.4rem;
-      color: var(--cream);
+      color: var(--brown-dark);
     }
 
     .cart-close {
