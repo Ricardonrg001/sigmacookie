@@ -20,8 +20,6 @@
       --muted: #7a5c44;
        
     }
-
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -667,7 +665,7 @@
     const notes = document.getElementById('notes').value.trim();
     const notesLine = notes ? `\n\n📝 Aclaración: ${notes}` : '';
 
-    const msg = `¡Hola! Quiero hacer un pedido de ${SHOP_NAME}:\n\n${lines.join('\n')}\n\n💰 Total: $${total.toLocaleString('es-AR')}${notesLine}`;
+    const msg = `¡Hola! Quiero hacer un pedido de ${SHOP_NAME}:\n\n${lines.join('\n')}\n\n Total: $${total.toLocaleString('es-AR')}${notesLine}`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   }
